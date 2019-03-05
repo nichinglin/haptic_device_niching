@@ -49,7 +49,7 @@ git clone https://github.com/nichinglin/haptic_device_niching.git
 cd ~/haptic_device_niching/docker/
 docker build --rm -t [your_docker_image_name] . --no-cache
 # example:
-# docker build --rm -t haptic_device_niching:laptop . --no-cache
+# docker build --rm -t nichinglin/haptic_device_niching:laptop . --no-cache
 ```
 ### How to Push to your docker hub
 ``` bash

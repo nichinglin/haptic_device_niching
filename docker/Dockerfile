@@ -9,19 +9,23 @@ RUN apt-get update && apt-get install -q -y \
     lsb-release \
     && rm -rf /var/lib/apt/lists/*
 
-RUN sudo pip install bitstring
-
 RUN apt-get update && apt-get install -q -y \
     vim \
     git \
     sudo \
     bash \
     net-tools \
+    wget \
+    cmake \
+    build-essential \
     python-bluetooth \
+    python-bluez \
     python-pip \
     bluez \
     bluetooth \
     && rm -rf /var/lib/apt/lists/*
+
+RUN sudo pip install bitstring
 
 # setup keys
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 421C365BD9FF1F717815A3895523BAEEB01FA116
