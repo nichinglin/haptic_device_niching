@@ -39,6 +39,25 @@ git clone https://github.com/nichinglin/haptic_device_niching.git
 
 ## How To Run
 ``` bash
+# open bluetooth and connect to device
+sudo service bluetooth start
+sudo bluetoothctl
+power on
+agent on
+default-agent
+scan on
+...
+scan off
+# find device bluetooth mac address (I use 20:15:04:30:61:95)
+pair 20:15:04:30:61:95
+# [agent] Enter PIN code: 1234
+connect 20:15:04:30:61:95
+exit
+
+cd ~/haptic_device_niching/python
+python KeyBinder.py -a [device_id]
+# example: python KeyBinder.py -a 9
+# press 'q' to quit KeyBinder.py
 ```
 (add same to any terminal except the first docker terminal)
 
